@@ -57,6 +57,8 @@
         .slide.active .animate-in { animation: fadeInDown 0.8s both; }
         .slide.active .animate-pop-in { animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) both; }
         .slide.active .animate-fade-in { animation: fadeIn 0.8s both; }
+        .slide.active .animate-slide-in-left { animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+        .slide.active .animate-slide-in-right { animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
         .slide.active .animate-in-delay-1 { animation-delay: 0.2s; }
         .slide.active .animate-in-delay-2 { animation-delay: 0.4s; }
         .slide.active .animate-in-delay-3 { animation-delay: 0.6s; }
@@ -64,11 +66,16 @@
         .slide.active .animate-in-delay-5 { animation-delay: 1.0s; }
         .slide.active .animate-in-delay-6 { animation-delay: 1.2s; }
         .slide.active .animate-in-delay-7 { animation-delay: 1.4s; }
+        .slide.active .animate-in-delay-8 { animation-delay: 1.6s; }
         .slide.active .animate-bar { animation: growWidth 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        
         @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes popIn { 0% { opacity: 0; transform: scale(0.5); } 100% { opacity: 1; transform: scale(1); } }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes growWidth { from { width: 0%; } }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+
         .nav-button {
             position: absolute;
             top: 50%;
@@ -148,7 +155,7 @@
             <div id="slide-8" class="slide">
                 <h2 class="text-4xl font-bold text-center mb-2 animate-in" style="color: var(--oe-blue);">Frecuencia de Uso de Plataformas</h2>
                 <p class="text-center text-gray-400 italic text-sm mb-4 animate-in animate-in-delay-1">P14-18: En una escala del 1 al 5, ¿con qué frecuencia usas...? (Cantidad de usuarios por calificación)</p>
-                <div class="flex-1 flex flex-col justify-center space-y-2 animate-in animate-in-delay-1"><div class="flex items-center text-sm font-bold"><div class="w-32 text-right mr-4">PLATAFORMA</div><div class="flex-1 grid grid-cols-5 gap-2 text-center"><div style="color:var(--oe-orange)">1 (NUNCA)</div><div style="color:var(--oe-orange)">2</div><div style="color:var(--oe-orange)">3</div><div style="color:var(--oe-orange)">4</div><div style="color:var(--oe-cyan)">5 (SIEMPRE)</div></div><div class="w-20 text-center font-bold" style="color:var(--oe-blue);">TOTAL</div></div><div class="flex items-center"><div class="w-32 text-right mr-4"><i class="fab fa-youtube text-4xl" style="color:#ff0000"></i></div><div class="flex-1 grid grid-cols-5 gap-2 text-center text-white font-bold"><div class="p-2 rounded animate-pop-in animate-in-delay-2" style="background-color:rgba(255,0,0,0.3)">3</div><div class="p-2 rounded animate-pop-in animate-in-delay-3" style="background-color:rgba(255,0,0,0.4)">2</div><div class="p-2 rounded animate-pop-in animate-in-delay-4" style="background-color:rgba(255,0,0,0.6)">3</div><div class="p-2 rounded animate-pop-in animate-in-delay-5" style="background-color:rgba(255,0,0,0.8)">1</div><div class="p-2 rounded animate-pop-in animate-in-delay-6" style="background-color:rgba(255,0,0,1)">15</div></div><div class="w-20 text-center font-bold text-2xl" style="color:var(--oe-blue);">24</div></div><div class="flex items-center"><div class="w-32 text-right mr-4"><i class="fab fa-instagram text-4xl" style="color:#e1306c"></i></div><div class="flex-1 grid grid-cols-5 gap-2 text-center text-white font-bold"><div class="p-2 rounded animate-pop-in animate-in-delay-2" style="background-color:rgba(225,48,108,0.3)">6</div><div class="p-2 rounded animate-pop-in animate-in-delay-3" style="background-color:rgba(225,48,108,0.4)">2</div><div class="p-2 rounded animate-pop-in animate-in-delay-4" style="background-color:rgba(225,48,108,0.6)">3</div><div class="p-2 rounded animate-pop-in animate-in-delay-5" style="background-color:rgba(225,48,108,0.8)">1</div><div class="p-2 rounded animate-pop-in animate-in-delay-6" style="background-color:rgba(225,48,108,1)">12</div></div><div class="w-20 text-center font-bold text-2xl" style="color:var(--oe-blue);">24</div></div><div class="flex items-center"><div class="w-32 text-right mr-4"><i class="fab fa-facebook text-4xl" style="color:#1877f2"></i></div><div class="flex-1 grid grid-cols-5 gap-2 text-center text-white font-bold"><div class="p-2 rounded animate-pop-in animate-in-delay-2" style="background-color:rgba(24,119,242,0.3)">3</div><div class="p-2 rounded animate-pop-in animate-in-delay-3" style="background-color:rgba(24,119,242,0.4)">5</div><div class="p-2 rounded animate-pop-in animate-in-delay-4" style="background-color:rgba(24,119,242,0.6)">6</div><div class="p-2 rounded animate-pop-in animate-in-delay-5" style="background-color:rgba(24,119,242,0.8)">2</div><div class="p-2 rounded animate-pop-in animate-in-delay-6" style="background-color:rgba(24,119,242,1)">8</div></div><div class="w-20 text-center font-bold text-2xl" style="color:var(--oe-blue);">24</div></div><div class="flex items-center"><div class="w-32 text-right mr-4"><i class="fab fa-tiktok text-4xl" style="color:#000000"></i></div><div class="flex-1 grid grid-cols-5 gap-2 text-center text-white font-bold"><div class="p-2 rounded animate-pop-in animate-in-delay-2" style="background-color:rgba(0,0,0,0.3)">12</div><div class="p-2 rounded animate-pop-in animate-in-delay-3" style="background-color:rgba(0,0,0,0.4)">4</div><div class="p-2 rounded animate-pop-in animate-in-delay-4" style="background-color:rgba(0,0,0,0.6)">2</div><div class="p-2 rounded animate-pop-in animate-in-delay-5" style="background-color:rgba(0,0,0,0.8)">1</div><div class="p-2 rounded animate-pop-in animate-in-delay-6" style="background-color:rgba(0,0,0,1)">5</div></div><div class="w-20 text-center font-bold text-2xl" style="color:var(--oe-blue);">24</div></div><div class="flex items-center"><div class="w-32 text-right mr-4"><i class="fab fa-twitter text-4xl" style="color:#1da1f2"></i></div><div class="flex-1 grid grid-cols-5 gap-2 text-center text-white font-bold"><div class="p-2 rounded animate-pop-in animate-in-delay-2" style="background-color:rgba(29,161,242,0.3)">12</div><div class="p-2 rounded animate-pop-in animate-in-delay-3" style="background-color:rgba(29,161,242,0.4)">6</div><div class="p-2 rounded animate-pop-in animate-in-delay-4" style="background-color:rgba(29,161,242,0.6)">2</div><div class="p-2 rounded animate-pop-in animate-in-delay-5" style="background-color:rgba(29,161,242,0.8)">0</div><div class="p-2 rounded animate-pop-in animate-in-delay-6" style="background-color:rgba(29,161,242,1)">4</div></div><div class="w-20 text-center font-bold text-2xl" style="color:var(--oe-blue);">24</div></div>
+                <div class="flex-1 flex flex-col justify-center space-y-2 animate-in animate-in-delay-1"><div class="flex items-center text-sm font-bold"><div class="w-32 text-right mr-4">PLATAFORMA</div><div class="flex-1 grid grid-cols-5 gap-2 text-center"><div style="color:var(--oe-orange)">1 (NUNCA)</div><div style="color:var(--oe-orange)">2</div><div style="color:var(--oe-orange)">3</div><div style="color:var(--oe-orange)">4</div><div style="color:var(--oe-cyan)">5 (SIEMPRE)</div></div><div class="w-20 text-center font-bold" style="color:var(--oe-blue);">TOTAL</div></div><div class="flex items-center"><div class="w-32 text-right mr-4"><i class="fab fa-youtube text-4xl" style="color:#ff0000"></i></div><div class="flex-1 grid grid-cols-5 gap-2 text-center text-white font-bold"><div class="p-2 rounded animate-pop-in animate-in-delay-2" style="background-color:rgba(255,0,0,0.3)">3</div><div class="p-2 rounded animate-pop-in animate-in-delay-3" style="background-color:rgba(255,0,0,0.4)">2</div><div class="p-2 rounded animate-pop-in animate-in-delay-4" style="background-color:rgba(255,0,0,0.6)">3</div><div class="p-2 rounded animate-pop-in animate-in-delay-5" style="background-color:rgba(255,0,0,0.8)">1</div><div class="p-2 rounded animate-pop-in animate-in-delay-6" style="background-color:rgba(255,0,0,1)">15</div></div><div class="w-20 text-center font-bold text-2xl animate-pop-in animate-in-delay-7" style="color:var(--oe-blue);">24</div></div><div class="flex items-center"><div class="w-32 text-right mr-4"><i class="fab fa-instagram text-4xl" style="color:#e1306c"></i></div><div class="flex-1 grid grid-cols-5 gap-2 text-center text-white font-bold"><div class="p-2 rounded animate-pop-in animate-in-delay-2" style="background-color:rgba(225,48,108,0.3)">6</div><div class="p-2 rounded animate-pop-in animate-in-delay-3" style="background-color:rgba(225,48,108,0.4)">2</div><div class="p-2 rounded animate-pop-in animate-in-delay-4" style="background-color:rgba(225,48,108,0.6)">3</div><div class="p-2 rounded animate-pop-in animate-in-delay-5" style="background-color:rgba(225,48,108,0.8)">1</div><div class="p-2 rounded animate-pop-in animate-in-delay-6" style="background-color:rgba(225,48,108,1)">12</div></div><div class="w-20 text-center font-bold text-2xl animate-pop-in animate-in-delay-7" style="color:var(--oe-blue);">24</div></div><div class="flex items-center"><div class="w-32 text-right mr-4"><i class="fab fa-facebook text-4xl" style="color:#1877f2"></i></div><div class="flex-1 grid grid-cols-5 gap-2 text-center text-white font-bold"><div class="p-2 rounded animate-pop-in animate-in-delay-2" style="background-color:rgba(24,119,242,0.3)">3</div><div class="p-2 rounded animate-pop-in animate-in-delay-3" style="background-color:rgba(24,119,242,0.4)">5</div><div class="p-2 rounded animate-pop-in animate-in-delay-4" style="background-color:rgba(24,119,242,0.6)">6</div><div class="p-2 rounded animate-pop-in animate-in-delay-5" style="background-color:rgba(24,119,242,0.8)">2</div><div class="p-2 rounded animate-pop-in animate-in-delay-6" style="background-color:rgba(24,119,242,1)">8</div></div><div class="w-20 text-center font-bold text-2xl animate-pop-in animate-in-delay-7" style="color:var(--oe-blue);">24</div></div><div class="flex items-center"><div class="w-32 text-right mr-4"><i class="fab fa-tiktok text-4xl" style="color:#000000"></i></div><div class="flex-1 grid grid-cols-5 gap-2 text-center text-white font-bold"><div class="p-2 rounded animate-pop-in animate-in-delay-2" style="background-color:rgba(0,0,0,0.3)">12</div><div class="p-2 rounded animate-pop-in animate-in-delay-3" style="background-color:rgba(0,0,0,0.4)">4</div><div class="p-2 rounded animate-pop-in animate-in-delay-4" style="background-color:rgba(0,0,0,0.6)">2</div><div class="p-2 rounded animate-pop-in animate-in-delay-5" style="background-color:rgba(0,0,0,0.8)">1</div><div class="p-2 rounded animate-pop-in animate-in-delay-6" style="background-color:rgba(0,0,0,1)">5</div></div><div class="w-20 text-center font-bold text-2xl animate-pop-in animate-in-delay-7" style="color:var(--oe-blue);">24</div></div><div class="flex items-center"><div class="w-32 text-right mr-4"><i class="fab fa-twitter text-4xl" style="color:#1da1f2"></i></div><div class="flex-1 grid grid-cols-5 gap-2 text-center text-white font-bold"><div class="p-2 rounded animate-pop-in animate-in-delay-2" style="background-color:rgba(29,161,242,0.3)">12</div><div class="p-2 rounded animate-pop-in animate-in-delay-3" style="background-color:rgba(29,161,242,0.4)">6</div><div class="p-2 rounded animate-pop-in animate-in-delay-4" style="background-color:rgba(29,161,242,0.6)">2</div><div class="p-2 rounded animate-pop-in animate-in-delay-5" style="background-color:rgba(29,161,242,0.8)">0</div><div class="p-2 rounded animate-pop-in animate-in-delay-6" style="background-color:rgba(29,161,242,1)">4</div></div><div class="w-20 text-center font-bold text-2xl animate-pop-in animate-in-delay-7" style="color:var(--oe-blue);">24</div></div>
                 <p class="text-xs text-center text-gray-500 mt-3"><b>Interpretación:</b> La intensidad del color y el número en cada celda representan la cantidad de usuarios que asignaron esa calificación (de 1 a 5) a cada red social.</p>
                 </div>
             </div>
@@ -166,9 +173,9 @@
             </div>
             <!-- Slide 11: Barreras -->
             <div id="slide-11" class="slide">
-                <h2 class="text-4xl font-bold text-center mb-2 animate-in" style="color: var(--oe-blue);">Principal Obstáculo Económico</h2>
+                <h2 class="text-4xl font-bold text-center mb-2 animate-in" style="color: var(--oe-blue);">Principal Obstáculo Percibido</h2>
                 <p class="text-center text-gray-400 italic text-sm mb-8 animate-in animate-in-delay-1">P22: ¿Cuál es el principal obstáculo económico para inscribirte en un curso como Open English?</p>
-                <div class="flex-1 grid grid-cols-2 gap-x-8 gap-y-6 items-center"><div class="flex items-center animate-in animate-in-delay-1 card-hover p-4 rounded-lg"><i class="fas fa-dollar-sign text-5xl w-20 text-center" style="color:var(--oe-orange);"></i><div><h3 class="text-xl font-bold" style="color:var(--oe-blue);">Costo Directo (33% - 8/24)</h3><p class="text-gray-600">"Precio mensual alto" es la barrera más citada.</p></div></div><div class="flex items-center animate-in animate-in-delay-2 card-hover p-4 rounded-lg"><i class="fas fa-wallet text-5xl w-20 text-center" style="color:var(--oe-orange);"></i><div><h3 class="text-xl font-bold" style="color:var(--oe-blue);">Ingresos (29% - 7/24)</h3><p class="text-gray-600">"No tengo ingresos estables" es un impedimento clave.</p></div></div><div class="flex items-center animate-in animate-in-delay-3 card-hover p-4 rounded-lg"><i class="fas fa-credit-card text-5xl w-20 text-center" style="color:var(--oe-orange);"></i><div><h3 class="text-xl font-bold" style="color:var(--oe-blue);">Flexibilidad de Pago</h3><p class="text-gray-600">Mencionan la necesidad de "forma de pago" y "financiación".</p></div></div><div class="flex items-center animate-in animate-in-delay-4 card-hover p-4 rounded-lg"><i class="fas fa-info-circle text-5xl w-20 text-center" style="color:var(--oe-orange);"></i><div><h3 class="text-xl font-bold" style="color:var(--oe-blue);">Falta de Información</h3><p class="text-gray-600">"No conozco precio", "No me mandaron la propuesta".</p></div></div></div>
+                <div class="flex-1 grid grid-cols-2 gap-x-8 gap-y-6 items-center"><div class="flex items-center animate-in animate-in-delay-1 card-hover p-4 rounded-lg"><i class="fas fa-dollar-sign text-5xl w-20 text-center" style="color:var(--oe-orange);"></i><div><h3 class="text-xl font-bold" style="color:var(--oe-blue);">Costo Directo (33% - 8/24)</h3><p class="text-gray-600">"Precio mensual alto" es la barrera más citada.</p></div></div><div class="flex items-center animate-in animate-in-delay-2 card-hover p-4 rounded-lg"><i class="fas fa-wallet text-5xl w-20 text-center" style="color:var(--oe-orange);"></i><div><h3 class="text-xl font-bold" style="color:var(--oe-blue);">Ingresos (29% - 7/24)</h3><p class="text-gray-600">"No tengo ingresos estables" es un impedimento clave.</p></div></div><div class="flex items-center animate-in animate-in-delay-3 card-hover p-4 rounded-lg"><i class="fas fa-credit-card text-5xl w-20 text-center" style="color:var(--oe-orange);"></i><div><h3 class="text-xl font-bold" style="color:var(--oe-blue);">Flexibilidad de Pago (8% - 2/24)</h3><p class="text-gray-600">Mencionan la necesidad de "forma de pago" y "financiación".</p></div></div><div class="flex items-center animate-in animate-in-delay-4 card-hover p-4 rounded-lg"><i class="fas fa-info-circle text-5xl w-20 text-center" style="color:var(--oe-orange);"></i><div><h3 class="text-xl font-bold" style="color:var(--oe-blue);">Falta de Información (13% - 3/24)</h3><p class="text-gray-600">"No conozco precio", "No me mandaron la propuesta".</p></div></div><div class="flex items-center animate-in animate-in-delay-5 card-hover p-4 rounded-lg col-span-2"><i class="fas fa-question text-5xl w-20 text-center" style="color:var(--oe-orange);"></i><div><h3 class="text-xl font-bold" style="color:var(--oe-blue);">Otros Obstáculos (17% - 4/24)</h3><p class="text-gray-600">Incluye preferencia por cursos gratuitos y otras razones no económicas.</p></div></div></div>
             </div>
             <!-- Slide 12: Confianza -->
             <div id="slide-12" class="slide">
@@ -176,12 +183,84 @@
                 <p class="text-center text-gray-400 italic text-sm mb-8 animate-in animate-in-delay-1">P25: ¿Habías oído hablar de Open English antes...? / P26: ¿Probaste Open English anteriormente? / P27: ...¿cuánta confianza te genera la marca?</p>
                 <div class="flex-1 grid grid-cols-3 gap-8 items-center text-center"><div class="animate-in animate-in-delay-1 card-hover p-4 rounded-lg"><h3 class="text-xl font-semibold mb-4" style="color:var(--oe-blue);">Conocimiento Previo</h3><i class="fas fa-history text-7xl" style="color:var(--oe-blue);"></i><p class="text-3xl font-bold mt-4">83% <span class="text-sm font-light">(20/24)</span></p><p class="text-gray-600">ya conocía la marca.</p></div><div class="animate-in animate-in-delay-3 card-hover p-4 rounded-lg"><h3 class="text-xl font-semibold mb-4" style="color:var(--oe-blue);">Experiencia Previa</h3><i class="fas fa-user-check text-7xl" style="color:var(--oe-orange);"></i><p class="text-3xl font-bold mt-4">91.7% <span class="text-sm font-light">(22/24)</span></p><p class="text-gray-600">nunca probó el servicio.</p></div><div class="animate-in animate-in-delay-5 card-hover p-4 rounded-lg"><h3 class="text-xl font-semibold mb-4" style="color:var(--oe-blue);">Nivel de Confianza</h3><div class="text-4xl text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i></div><p class="text-3xl font-bold mt-4">3.7 / 5.0</p><p class="text-gray-600">Puntuación promedio.</p></div></div>
             </div>
-            <!-- Slide 13: Competencia -->
-            <div id="slide-13" class="slide">
-                <h2 class="text-4xl font-bold text-center mb-2 animate-in" style="color: var(--oe-blue);">Análisis de Competencia</h2>
+            
+            <!-- Slide 13: Competencia (CORREGIDO) -->
+            <div id="slide-13" class="slide flex-col">
+                <h2 class="text-4xl font-bold text-center mb-2 animate-in" style="color: var(--oe-blue);">Panorama Competitivo y Factores de Decisión</h2>
                 <p class="text-center text-gray-400 italic text-sm mb-8 animate-in animate-in-delay-1">P28: ¿Qué otras opciones conoces para aprender inglés online? / P29: ¿Por qué elegirías una de esas opciones en lugar de Open English?</p>
-                <div class="flex-1 grid grid-cols-2 gap-8"><div class="bg-gray-100 p-8 rounded-lg flex flex-col justify-center animate-in animate-in-delay-1 card-hover"><h3 class="font-bold text-2xl mb-4" style="color:var(--oe-blue);">Alternativas Conocidas</h3><ul class="list-none space-y-3 text-gray-600 text-lg"><li class="flex items-start gap-3 animate-in animate-in-delay-2"><i class="fas fa-mobile-alt w-6 text-center pt-1" style="color:var(--oe-cyan);"></i><span>Apps Freemium (Ej: Duolingo).</span></li><li class="flex items-start gap-3 animate-in animate-in-delay-3"><i class="fas fa-university w-6 text-center pt-1" style="color:var(--oe-cyan);"></i><span>Educación Tradicional (Academias, Profesores).</span></li><li class="flex items-start gap-3 animate-in animate-in-delay-4"><i class="fas fa-question-circle w-6 text-center pt-1" style="color:var(--oe-cyan);"></i><span><strong style="color:var(--oe-orange);">25% (6/24) no conoce ninguna alternativa.</strong></span></li></ul></div><div class="bg-gray-100 p-8 rounded-lg flex flex-col justify-center animate-in animate-in-delay-2 card-hover"><h3 class="font-bold text-2xl mb-4" style="color:var(--oe-blue);">Razones para Elegir Otra Opción</h3><ul class="list-none space-y-3 text-gray-600 text-lg"><li class="flex items-start gap-3 animate-in animate-in-delay-3"><i class="fas fa-tags w-6 text-center pt-1" style="color:var(--oe-orange);"></i><span class="font-bold w-40 flex-shrink-0" style="color:var(--oe-orange);">Costo:</span><span>"Gratis", "Económico", "Barato".</span></li><li class="flex items-start gap-3 animate-in animate-in-delay-4"><i class="fas fa-hand-holding-usd w-6 text-center pt-1" style="color:var(--oe-orange);"></i><span class="font-bold w-40 flex-shrink-0" style="color:var(--oe-orange);">Flexibilidad Financiera:</span><span>"12 cuotas fijas".</span></li><li class="flex items-start gap-3 animate-in animate-in-delay-5"><i class="fas fa-comments-dollar w-6 text-center pt-1" style="color:var(--oe-orange);"></i><span class="font-bold w-40 flex-shrink-0" style="color:var(--oe-orange);">Transparencia:</span><span>"No dan tantas vueltas para pasarte los costos".</span></li></ul></div></div>
+                <div class="flex-1 grid grid-cols-2 gap-10">
+                    <!-- Columna Izquierda: Ecosistema de la Competencia -->
+                    <div class="flex flex-col items-center animate-slide-in-left animate-in-delay-1">
+                        <h3 class="text-2xl font-bold mb-5 text-center" style="color: var(--oe-blue);">Ecosistema de la Competencia</h3>
+                        <div class="w-full space-y-4">
+                            <div class="flex items-center bg-gray-100 p-3 rounded-lg card-hover animate-in animate-in-delay-2">
+                                <i class="fas fa-mobile-alt text-3xl w-16 text-center" style="color: var(--oe-cyan);"></i>
+                                <div>
+                                    <h4 class="font-bold" style="color: var(--oe-blue);">Apps Freemium (Duolingo, etc.)</h4>
+                                    <p class="text-sm text-gray-600">Valoradas por su acceso gratuito e inmediato.</p>
+                                </div>
+                            </div>
+                             <div class="flex items-center bg-gray-100 p-3 rounded-lg card-hover animate-in animate-in-delay-3">
+                                <i class="fas fa-university text-3xl w-16 text-center" style="color: var(--oe-cyan);"></i>
+                                <div>
+                                    <h4 class="font-bold" style="color: var(--oe-blue);">Educación Tradicional</h4>
+                                    <p class="text-sm text-gray-600">Academias locales y cursos presenciales.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center bg-gray-100 p-3 rounded-lg card-hover animate-in animate-in-delay-4">
+                                <i class="fas fa-user-tie text-3xl w-16 text-center" style="color: var(--oe-cyan);"></i>
+                                <div>
+                                    <h4 class="font-bold" style="color: var(--oe-blue);">Profesores Particulares</h4>
+                                    <p class="text-sm text-gray-600">Búsqueda de atención y clases personalizadas.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-3 rounded-lg card-hover animate-in animate-in-delay-5" style="background-color: #fff2e9;">
+                                <i class="fas fa-question-circle text-3xl w-16 text-center" style="color: var(--oe-orange);"></i>
+                                <div>
+                                    <h4 class="font-bold" style="color: var(--oe-orange);">25% No conoce alternativas</h4>
+                                    <p class="text-sm text-gray-600">Fuerte posicionamiento de Open English.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Factores de Decisión -->
+                    <div class="flex flex-col items-center animate-slide-in-right animate-in-delay-2">
+                        <h3 class="text-2xl font-bold mb-5 text-center" style="color: var(--oe-blue);">Razones para Elegir Otra Opción</h3>
+                        <div class="w-full space-y-4">
+                            <div class="animate-in animate-in-delay-3">
+                                <div class="flex justify-between items-center text-sm font-bold mb-1">
+                                    <span style="color: var(--oe-orange);">COSTO / PRECIO</span>
+                                    <span class="text-lg" style="color: var(--oe-orange);">Factor #1</span>
+                                </div>
+                                <div class="bg-gray-200 rounded-full h-6"><div class="animate-bar rounded-full h-6 flex items-center justify-end pr-3 text-white text-xs font-bold" style="width: 80%; background-color: var(--oe-orange);">"Gratis", "Económico", "Barato"</div></div>
+                            </div>
+                            <div class="animate-in animate-in-delay-4">
+                                <div class="flex justify-between items-center text-sm font-bold mb-1">
+                                    <span style="color: var(--oe-blue);">PROCESO Y FLEXIBILIDAD DE PAGO</span>
+                                </div>
+                                <div class="bg-gray-200 rounded-full h-6"><div class="animate-bar rounded-full h-6 flex items-center justify-end pr-3 text-white text-xs font-bold" style="width: 55%; background-color: var(--oe-blue);">"En cuotas", "Sin vueltas"</div></div>
+                            </div>
+                             <div class="animate-in animate-in-delay-5">
+                                <div class="flex justify-between items-center text-sm font-bold mb-1">
+                                    <span style="color: var(--oe-cyan);">CONVENIENCIA</span>
+                                </div>
+                                <div class="bg-gray-200 rounded-full h-6"><div class="animate-bar rounded-full h-6 flex items-center justify-end pr-3 text-white text-xs font-bold" style="width: 40%; background-color: var(--oe-cyan);">"A mi ritmo", "Desde casa"</div></div>
+                            </div>
+                        </div>
+                        <div class="mt-6 w-full border-l-4 p-4 rounded-lg animate-pop-in animate-in-delay-6" style="background-color: #e5f9fb; border-color: var(--oe-cyan);">
+                            <div class="flex">
+                                <div class="py-1"><i class="fas fa-heart text-2xl mr-4" style="color: var(--oe-cyan);"></i></div>
+                                <div>
+                                    <p class="font-bold" style="color: #005f69;">Fidelidad a la Marca</p>
+                                    <p class="text-sm" style="color: #005f69;">A pesar de todo, el 21% prefiere activamente Open English sobre cualquier otra opción.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <!-- Slide 14: Conclusiones -->
             <div id="slide-14" class="slide dark !p-0"><div class="h-full flex flex-col items-center justify-center text-center"><h1 class="text-4xl font-bold mb-8 animate-in">Insights Estratégicos</h1><div class="grid grid-cols-3 gap-8 max-w-6xl px-4"><div class="animate-in animate-in-delay-2"><div class="flex justify-center items-center h-20 w-20 rounded-full mx-auto mb-4 border-4 border-white" style="background-color: var(--oe-cyan);"><i class="fas fa-check-circle text-4xl"></i></div><h3 class="text-3xl font-extrabold mb-2">POTENCIAL</h3><p class="text-gray-300">La marca es un <strong class="text-white">referente del mercado</strong> con una recordación masiva y una propuesta de valor clara y positiva.</p></div><div class="animate-in animate-in-delay-3"><div class="flex justify-center items-center h-20 w-20 rounded-full mx-auto mb-4 border-4 border-white" style="background-color: var(--oe-orange);"><i class="fas fa-exclamation-triangle text-4xl"></i></div><h3 class="text-3xl font-extrabold mb-2">FRICCIÓN</h3><p class="text-gray-300">El <strong class="text-white">costo y la rigidez en los pagos</strong> son la principal barrera. El proceso de venta es percibido como <strong class="text-white">lento y poco transparente</strong>.</p></div><div class="animate-in animate-in-delay-4"><div class="flex justify-center items-center h-20 w-20 rounded-full mx-auto mb-4 border-4 border-white" style="background-color: #fff;"><i class="fas fa-bullseye text-4xl" style="color:var(--oe-blue);"></i></div><h3 class="text-3xl font-extrabold mb-2 text-white">OPORTUNIDAD</h3><p class="text-gray-300">Existe una <strong class="text-white">demanda latente del 92%</strong> que se activaría con <strong class="text-white">planes de pago flexibles</strong> y mayor <strong class="text-white">transparencia</strong>.</p></div></div></div></div>
         </div>
@@ -338,19 +417,19 @@
 
                         if (distance < minDistance) {
                            const angle = Math.atan2(dy, dx);
-                           const overlap = minDistance - distance;
-                           
-                           bubbles[i].x -= (overlap / 2) * Math.cos(angle);
-                           bubbles[i].y -= (overlap / 2) * Math.sin(angle);
-                           bubbles[j].x += (overlap / 2) * Math.cos(angle);
-                           bubbles[j].y += (overlap / 2) * Math.sin(angle);
+                            const overlap = minDistance - distance;
+                            
+                            bubbles[i].x -= (overlap / 2) * Math.cos(angle);
+                            bubbles[i].y -= (overlap / 2) * Math.sin(angle);
+                            bubbles[j].x += (overlap / 2) * Math.cos(angle);
+                            bubbles[j].y += (overlap / 2) * Math.sin(angle);
 
-                           const tempVx = bubbles[i].vx;
-                           const tempVy = bubbles[i].vy;
-                           bubbles[i].vx = bubbles[j].vx;
-                           bubbles[i].vy = bubbles[j].vy;
-                           bubbles[j].vx = tempVx;
-                           bubbles[j].vy = tempVy;
+                            const tempVx = bubbles[i].vx;
+                            const tempVy = bubbles[i].vy;
+                            bubbles[i].vx = bubbles[j].vx;
+                            bubbles[i].vy = bubbles[j].vy;
+                            bubbles[j].vx = tempVx;
+                            bubbles[j].vy = tempVy;
                         }
                     }
                 }
@@ -378,7 +457,7 @@
                 });
             }
 
-            showSlide(currentSlide);
+            showSlide(0); // Start on the first slide
         });
     </script>
 </body>
